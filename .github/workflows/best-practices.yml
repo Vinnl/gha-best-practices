@@ -4,11 +4,14 @@ on:
   push:
   workflow_dispatch:
 
-steps:
-  - name: Checkout
-    id: checkout
-    uses: actions/checkout@v4
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
 
-  - name: Test Action "Github Actions Best Practices"
-    id: test-action
-    uses: ./
+      - name: Test Action "Github Actions Best Practices"
+        id: test-action
+        uses: ./
