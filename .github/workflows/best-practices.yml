@@ -1,0 +1,8 @@
+steps:
+  - name: Checkout
+    id: checkout
+    uses: actions/checkout@v4
+
+  - name: Test Action "Github Actions Best Practices"
+    id: test-action
+    uses: ./
