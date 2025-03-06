@@ -14,11 +14,11 @@ function getWarningsForWorkflow(
   const warnings = [] as string[];
   if (!workflowConfig.permissions) {
     warnings.push(
-      `Job [${workflowPath}] has not set the least required privileges for $GITHUB_TOKEN. See https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#defining-access-for-the-github_token-scopes.`,
+      `Workflow [${workflowPath}] has not set the least required privileges for $GITHUB_TOKEN. See https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#defining-access-for-the-github_token-scopes.`,
     );
   } else if (Object.values(workflowConfig.permissions).length !== 0) {
     warnings.push(
-      `Job [${workflowPath}] has defined non-empty workflow-level permissions for $GITHUB_TOKEN. To ensure least privileges, set the minimal permissions at the job, rather than workflow, level. See https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idpermissions.`,
+      `Workflow [${workflowPath}] has defined non-empty workflow-level permissions for $GITHUB_TOKEN. To ensure least privileges, set the minimal permissions at the job, rather than workflow, level. See https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idpermissions.`,
     );
   }
   return warnings;

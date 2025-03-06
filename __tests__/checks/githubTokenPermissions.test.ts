@@ -66,8 +66,8 @@ describe("githubTokenPermissionsCheck", () => {
           invalidGlobalPermissionsWorkflowConfig,
       }),
     ).resolves.toStrictEqual([
-      "Job [invalid-no-permissions-config.yaml] has not set the least required privileges for $GITHUB_TOKEN. See https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#defining-access-for-the-github_token-scopes.",
-      "Job [invalid-global-permissions-config.yaml] has defined non-empty workflow-level permissions for $GITHUB_TOKEN. To ensure least privileges, set the minimal permissions at the job, rather than workflow, level. See https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idpermissions.",
+      "Workflow [invalid-no-permissions-config.yaml] has not set the least required privileges for $GITHUB_TOKEN. See https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#defining-access-for-the-github_token-scopes.",
+      "Workflow [invalid-global-permissions-config.yaml] has defined non-empty workflow-level permissions for $GITHUB_TOKEN. To ensure least privileges, set the minimal permissions at the job, rather than workflow, level. See https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idpermissions.",
     ]);
   });
 });
