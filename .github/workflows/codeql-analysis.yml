@@ -10,16 +10,17 @@ on:
   schedule:
     - cron: "31 7 * * 3"
 
-permissions:
-  actions: read
-  checks: write
-  contents: read
-  security-events: write
+permissions: {}
 
 jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      checks: write
+      contents: read
+      security-events: write
 
     strategy:
       fail-fast: false
@@ -31,6 +32,8 @@ jobs:
       - name: Checkout
         id: checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Initialize CodeQL
         id: initialize
