@@ -1,3 +1,9 @@
+name: Test Action "Github Actions Best Practices"
+
+on:
+  push:
+  workflow_dispatch:
+
 steps:
   - name: Checkout
     id: checkout
