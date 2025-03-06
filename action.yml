@@ -1,23 +1,11 @@
-name: The name of your action here
-description: Provide a description here
-author: Your name or organization here
-
-# Add your action's branding here. This will appear on the GitHub Marketplace.
-branding:
-  icon: heart
-  color: red
-
-# Define your inputs here.
-inputs:
-  milliseconds:
-    description: Your input description here
-    required: true
-    default: '1000'
+name: Mozilla Best GitHub Actions Practices
+description: Checks adherance to https://wiki.mozilla.org/GitHub/Repository_Security/GitHub_Workflows_%26_Actions
+author: Mozilla
 
 # Define your outputs here.
 outputs:
-  time:
-    description: Your output description here
+  warnings:
+    description: A list of potential issues with your GitHub Actions workflows
 
 runs:
   using: node20
