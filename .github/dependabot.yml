@@ -2,8 +2,8 @@ version: 2
 updates:
   - package-ecosystem: github-actions
     directory: /
-    schedule:
-      interval: weekly
+    #schedule:
+      #interval: weekly
     groups:
       actions-minor:
         update-types:
@@ -12,8 +12,8 @@ updates:
 
   - package-ecosystem: npm
     directory: /
-    schedule:
-      interval: weekly
+    #schedule:
+      #interval: weekly
     ignore:
       - dependency-name: "@types/node"
         update-types:
